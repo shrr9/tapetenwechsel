@@ -14,6 +14,7 @@ Second, to set the wallpaper, run ./set_wallpaper image 1. The last number is th
 I have 'designed' a wallpaper for you to test out. To use it:
 
 ./prepare shitty_wallpaper.jpg 20
+
 ./set_wallpaper shitty_wallpaper 1
 
 # Disclaimer
