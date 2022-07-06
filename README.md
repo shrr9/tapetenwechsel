@@ -20,4 +20,11 @@ I have 'designed' a wallpaper for you to test out. To use it:
 # Disclaimer
 This is just for fun and a very coarse scaped together project, so bugs are expected, and i might not have the motivavtion to improve it. Just have a look at the code yourself, its not too hard :)
 
+# Issues
+Currently i have serveral ideaas to improve on:
+
+-Improve the hue shifting process in speed and qualtiy
+
+-Find a faster wallpaper tha nitrogen - limits minimum time between updates
+
 # Enjoy
