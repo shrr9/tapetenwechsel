@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dirname=$1
+count=$(find $dirname -maxdepth 1 -type f|wc -l)
+time=$2;
+
+while true
+do
+    for (( i=0; i<$count; i++ ))
+    do
+        nitrogen --set-zoom-fill $dirname/$i.png
+        sleep $time
+    done
+done
