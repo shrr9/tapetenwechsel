@@ -11,6 +11,11 @@ First, t prepare the wallpaper,  all differenct color shades have to be created.
 
 Second, to set the wallpaper, run ./set_wallpaper image 1. The last number is the delay in seconds between two color Shades.
 
+I have 'designed' a wallpaper for you to test out. To use it:
+
+./prepare shitty_wallpaper.jpg 20
+./set_wallpaper shitty_wallpaper 1
+
 # Disclaimer
 This is just for fun and a very coarse scaped together project, so bugs are expected, and i might not have the motivavtion to improve it. Just have a look at the code yourself, its not too hard :)
 
