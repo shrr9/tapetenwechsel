@@ -53,9 +53,9 @@ def hsv_to_rgb(hsv):
 
 
 def shift_hue(arr,hout):
-    hsv=rgb_to_hsv(arr)
-    hsv[...,0]=hout
+    hsv[...,0]+=hout
     rgb=hsv_to_rgb(hsv)
+    hsv[...,0]-=hout
     return rgb
 
 img_name = sys.argv[1]
@@ -64,6 +64,7 @@ dir_name = img_name.split('/')[-1]
 dir_name = dir_name.split('.')[0]+'_hue'
 img = Image.open(img_name).convert('RGBA')
 arr = np.array(img)
+hsv = rgb_to_hsv(arr)
 
 if __name__=='__main__':
     if not os.path.isdir(dir_name):
@@ -74,7 +75,7 @@ if __name__=='__main__':
 
 
     for i in enumerate(tqdm(np.linspace(0,1,int(amount)))):
-        new_img = Image.fromarray(shift_hue(arr,i[1]), 'RGBA')
+        new_img = Image.fromarray(shift_hue(hsv,i[1]), 'RGBA')
         x = str(i[0])
         new_img_name = x+'.png'
         new_img.save(dir_name+'/'+new_img_name)
